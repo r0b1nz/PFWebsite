@@ -5,6 +5,20 @@
 	<title>Quiz 1</title>
 	<link rel="stylesheet" href="css/cardstyle.css">
     <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript">
+        function Choice1(){
+        alert("Choice1");
+        }
+        function Choice2(){
+        alert("Choice2");
+        }
+        function Choice3(){
+        alert("Choice3");
+        }
+        function Choice4(){
+        alert("Choice4");
+        }
+    </script>
 </head>
 <body>
 <div class="main">
@@ -15,29 +29,41 @@
         <div class="line">
         </div>
         <div class="labelback">
-            <label>Q1. This is question 1.</label>
+            <label>Q1. Choose your favourite superhero.</label>
         </div>
         
     </div>
     <!-- Frame of Search Results -->
     <div class="contentspace">
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        <div class="choice"><p>Choice 1</p>
+        <div class="choice" onclick="Choice1();"><img src="images/1.jpg">
             </div>
-        <div class="choice2"><p>Choice 2</p>
+        <div class="choice2" onclick="Choice2();"><img src="images/2.jpg">
             </div>
-        <div class="choice3"><p>Choice 3</p>
+        <div class="choice3" onclick="Choice3();"><img src="images/3.jpg">
             </div>
-        <div class="choice4"><p>Choice 4</p>
+        <div class="choice4" onclick="Choice4();"><img src="images/4.jpg">
             </div>
-        </form>
     </div>
+<!--
     <div class="tabs">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <button type="submit">1</button><button type="submit">2</button><button type="submit">3</button><button type="submit">4</button><button type="submit">5</button>
         <button type="submit">6</button><button type="submit">7</button><button type="submit">8</button><button type="submit">9</button><button type="submit">10</button>
         </form>
     </div>
+-->
 </div>
 </body>
 </html>
+
+<script>
+$(function() {
+    $("body").click(function(e) {
+        if (e.target.id == "choice1" || $(e.target).parents("#choice1").size()) { 
+            alert("Inside div");
+        } else { 
+           alert("Outside div");
+        }
+    });
+})
+</script>
