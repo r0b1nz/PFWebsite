@@ -21,7 +21,7 @@
     </script>
 </head>
 <body>
-<div class="main">
+<div class="main animated fadeIn">
     
     <div class="sidebar">
         <h2>QUIZ 1</h2>
