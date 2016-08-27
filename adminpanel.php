@@ -8,6 +8,8 @@
 </head>
 <body>
 	<div>
+        <div class="btn2">
+        <button name="change" id="btn2" class="animated fadeIn" onclick="location.href='login.php'">LOGOUT</button></div>
 		<div>
 			<h1 id="mainTitle" class="animated fadeInDown">Quiz A-Carte</h1>
         </div><br><br>
