@@ -51,12 +51,40 @@
 
 		//POST REQUEST -> CHECK THE ANSWER FOR 'LASTquiz' - 'LASTans'
 
-	// Randomizing Options.
+
 		$options = array($row['opt1'],$row['opt2'],$row['opt3'],$row['opt4']);
 		shuffle($options)
 
 	// exit();
 	?>
+
+<script type="text/javascript">
+    var iRobin = 9;
+setInterval(pecFest_Counter, 1000);
+
+function pecFest_Counter(){
+    var a = document.getElementById('timer');
+    a.innerHTML = "Time Left: " + iRobin;
+    if(iRobin == 0){
+        alert("Time limit exceeded.");
+        location.reload();
+    }
+    iRobin = iRobin-1 ;
+}
+
+</script>
+
+<!-- NOTE:
+
+	 Save the current time in Session, and when the page refreshes or gets a POST request, compare the time.
+	if the difference is approximately the same as of the alotted time, then pass.. else stop the QUIZ.
+
+	To be done by the person who implements the Button/answer inputs. 
+
+	-ROBIN GAUTAM
+
+	-->
+
 
 	<!DOCTYPE HTML>
 <html>
@@ -85,7 +113,7 @@
 <div class="main animated fadeIn">
     <div class="sidebar">
         <h2>QUIZ 1</h2>
-        <h4>Time Left: 00: 59</h4>
+        <h4 id="timer">Time Left: 10</h4>
         <div class="line">
         </div>
         <div class="labelback">
