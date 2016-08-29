@@ -1,6 +1,6 @@
 <?php
 
-//CONTAINS DATABASE ACCESS CREDENTIALS
+//CONTAINS DATABASE ACCESS CREDENTIALS.
 
 $DBservername = "localhost";
 $DBusername = "root";
